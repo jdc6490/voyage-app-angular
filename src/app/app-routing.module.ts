@@ -5,10 +5,10 @@ import { AuthGuardService } from './authentication/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', loadChildren: () => import('app/dashboard/dashboard.module').then(m => m.DashboardModule), canLoad: [AuthGuardService] },
-  { path: 'examples', loadChildren: () => import('app/examples/examples.module').then(m => m.ExamplesModule), canLoad: [AuthGuardService] },
-  { path: 'admin', loadChildren: () => import('app/admin/admin.module').then(m => m.AdminModule), canLoad: [AuthGuardService] },
-  { path: 'profile', loadChildren: () => import('app/profile/profile.module').then(m => m.ProfileModule), canLoad: [AuthGuardService] }
+  { path: 'dashboard', loadChildren: () => import('app/dashboard/dashboard.module').then(m => m.DashboardModule) }, //canLoad: [AuthGuardService] },
+  { path: 'examples', loadChildren: () => import('app/examples/examples.module').then(m => m.ExamplesModule) }, //, canLoad: [AuthGuardService] },
+  { path: 'admin', loadChildren: () => import('app/admin/admin.module').then(m => m.AdminModule) }, //, canLoad: [AuthGuardService] },
+  { path: 'profile', loadChildren: () => import('app/profile/profile.module').then(m => m.ProfileModule) }, //, canLoad: [AuthGuardService] }
 ];
 
 @NgModule({

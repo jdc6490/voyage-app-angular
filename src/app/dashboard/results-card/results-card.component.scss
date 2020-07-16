@@ -1,0 +1,37 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('assets/images/blood.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+mat-card-content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 0;
+}
+
+.care-plan-button {
+  float: right;
+  color: blue;
+  font-weight: 400;
+}
+
+.card-menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+
+  button {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0;
+  }
+}
